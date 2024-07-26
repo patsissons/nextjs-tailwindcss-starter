@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Link } from '@/components/Link';
 
 export default function Home() {
   return (
@@ -37,6 +38,43 @@ export default function Home() {
           height={37}
           priority
         />
+      </div>
+
+      <div className="flex max-w-xl flex-col gap-4 rounded-xl bg-slate-200/10 p-6 shadow-xl">
+        <h1 className="text-center text-xl font-bold">
+          Welcome to NextJS + Tailwind CSS starter kit
+        </h1>
+        <section className="flex flex-col gap-2">
+          <p>
+            This is a starter template for building a{' '}
+            <Link href="https://nextjs.org/" external>
+              NextJS
+            </Link>{' '}
+            app with{' '}
+            <Link href="https://tailwindcss.com/" external>
+              Tailwind CSS
+            </Link>
+            .
+          </p>
+          <p>Run the following commands to set it up:</p>
+          <code className="overflow-x-auto overflow-y-hidden rounded-md bg-slate-200 p-2 text-slate-900">
+            <pre className="whitespace-pre">
+              {`pnpm create next-app@latest nextjs-tailwindcss-starter --use-pnpm --app --src-dir --typescript --tailwind --eslint --import-alias "@/*"
+cd nextjs-tailwindcss-starter
+pnpm install -D eslint-config-prettier prettier prettier-plugin-tailwindcss`}
+            </pre>
+          </code>
+          <p>
+            Then build your{' '}
+            <code className="mx-1 rounded-sm bg-slate-200 px-1 py-0.5 text-slate-900">
+              .prettierrc
+            </code>
+            to your liking and run
+            <code className="mx-1 rounded-sm bg-slate-200 px-1 py-0.5 text-slate-900">
+              pnpm format
+            </code>
+          </p>
+        </section>
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
